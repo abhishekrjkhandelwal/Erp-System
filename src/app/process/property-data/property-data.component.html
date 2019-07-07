@@ -1,0 +1,61 @@
+<mat-card   class="card">
+  <div class="example-container">
+    <mat-form-field class="example-full-width">
+      <input matInput class="font1" placeholder="Entity" disabled value="IMOVALUE">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Administrator">
+    </mat-form-field>
+    </div>
+    </mat-card >
+  
+    <p class="font">Process Data</p>
+  
+    <mat-card class="card">
+        <div class="example-container">
+    <mat-form-field class="example-full-width">
+      <mat-label>Property Type</mat-label>
+      <mat-select>
+        <mat-option>None</mat-option>
+        <mat-option *ngFor="let property of propertiess" [value]="property">{{property}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Bedroom Number</mat-label>
+      <mat-select>
+        <mat-option>None</mat-option>
+        <mat-option *ngFor="let bed of bedroom" [value]="bed">{{bed}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Size (sqft)">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Unitary value">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Total value">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="GPS Coordinate">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="PO Box">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Locality">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Address">
+    </mat-form-field>
+  </div>
+  </mat-card>

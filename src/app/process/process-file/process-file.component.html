@@ -1,0 +1,167 @@
+<mat-card class="card">
+  <div class="example-container">
+    <mat-form-field class="example-full-width">
+      <input matInput class="font1" placeholder="Entity" disabled value="IMOVALUE">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Administrator">
+    </mat-form-field>
+  </div>
+  </mat-card>
+  
+  
+    <p class="font">Process Data</p> 
+   
+    <mat-card class="card">
+        <div class="example-container">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Process Input">
+    </mat-form-field>
+  
+    
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input type="text" placeholder="Client" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of options" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+  
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Proponent">
+    </mat-form-field>
+    
+    <mat-form-field class="example-full-width">
+        <mat-label>Property Type</mat-label>
+        <mat-select>
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let property of properties" [value]="property">{{property}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <mat-form-field class="example-full-width">
+          <mat-label>country</mat-label>
+          <mat-select>
+            <mat-option>None</mat-option>
+            <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+        <mat-form-field class="example-full-width">
+            <mat-label>District</mat-label>
+            <mat-select>
+              <mat-option>None</mat-option>
+              <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+              <mat-label>city</mat-label>
+              <mat-select>
+                <mat-option>None</mat-option>
+                <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            
+              <mat-form-field class="example-full-width">
+                <input matInput [matDatepicker]="picker" placeholder="Request Date" [min]="minDate"  [formControl]="dateCtrl">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker touchUi #picker></mat-datepicker>
+                <mat-error *ngIf="dateCtrl.hasError('required')">A Valid mm/dd/yyyy is required</mat-error>
+              </mat-form-field>
+            
+              <mat-form-field class="example-full-width">
+                <input matInput [matDatepicker]="picker1" placeholder="Due Date" [min]="minDate"  [formControl]="dateCtrl1">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker touchUi #picker1></mat-datepicker>
+                <mat-error *ngIf="dateCtrl1.hasError('required')">A Valid mm/dd/yyyy is required</mat-error>
+              </mat-form-field>
+              
+              
+              <mat-form-field class="example-full-width">
+                <input matInput [matDatepicker]="picker2"  placeholder="Contact Date"[min]="minDate"  [formControl]="dateCtrl2">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker touchUi #picker2></mat-datepicker>
+                <mat-error *ngIf="dateCtrl2.hasError('required')">A Valid mm/dd/yyyy is required</mat-error>
+              </mat-form-field>
+              
+              <mat-form-field class="example-full-width">
+                <input matInput [matDatepicker]="picker3" placeholder="Visit Date"[min]="minDate"  [formControl]="dateCtrl3">
+                <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                <mat-datepicker touchUi #picker3></mat-datepicker>
+                <mat-error *ngIf="dateCtrl3.hasError('required')">A Valid mm/dd/yyyy is required</mat-error>
+              </mat-form-field>
+              
+              
+              <mat-form-field class="example-full-width">
+                <input matInput [matDatepicker]="picker4"placeholder="Provisional Report Date" [min]="minDate" [formControl]="dateCtrl4">
+                <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+                <mat-datepicker touchUi #picker4></mat-datepicker>
+                <mat-error *ngIf="dateCtrl4.hasError('required')">A Valid mm/dd/yyyy is required</mat-error>
+              </mat-form-field>
+        
+              <mat-form-field class="example-full-width">
+                <input matInput [matDatepicker]="picker5"placeholder="Final Report Date" [min]="minDate"  [formControl]="dateCtrl5">
+                <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+                <mat-datepicker touchUi #picker5></mat-datepicker>
+                <mat-error *ngIf="dateCtrl5.hasError('required')">A Valid mm/dd/yyyy is required</mat-error>
+              </mat-form-field>
+              
+           
+  
+       <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input type="text" placeholder="Administrative officer" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+  
+      <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <input type="text" placeholder="Appraiser" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let option of options" [value]="option">
+                {{option}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+  
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <input type="text" placeholder="Controller" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+              <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of options" [value]="option">
+                  {{option}}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </form>
+          <mat-form-field class="example-full-width">
+              <mat-label>Process Status</mat-label>
+              <mat-select>
+                <mat-option>None</mat-option>
+                <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Active</mat-label>
+                <mat-select>
+                  <mat-option>None</mat-option>
+                  <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+  
+              <mat-form-field class="example-full-width">
+                  <textarea matInput placeholder="comment"></textarea>
+                </mat-form-field>
+    </div>
+  </mat-card>

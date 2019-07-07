@@ -1,0 +1,99 @@
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+    <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
+<mat-card class="card">
+    <div class="example-container">
+    <mat-form-field class="example-full-width">
+      <input matInput class="font1" placeholder="Entity"  disabled value="IMOVALUE">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput  class="form-control" #cfadmin="ngModel" [(ngModel)]="service.formData.cfAdmin" name="cfAdmin" placeholder="Administrator">
+    </mat-form-field>
+    </div>
+    </mat-card >
+
+    <p class="font">Client ID</p>
+
+    <mat-card class="card">
+      <div class="example-container">
+  <mat-form-field class="example-full-width">
+    <input matInput #cfname="ngModel" [(ngModel)]="service.formData.cfName" name="cfName" placeholder="Name">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Contact">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>country</mat-label>
+    <mat-select>
+      <mat-option>None</mat-option>
+      <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+      <mat-label>District</mat-label>
+      <mat-select>
+        <mat-option>None</mat-option>
+        <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>city</mat-label>
+      <mat-select>
+        <mat-option>None</mat-option>
+        <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Address">
+      </textarea>
+  </mat-form-field>
+
+<mat-form-field class="example-full-width">
+    <textarea matInput placeholder="PO BOX"></textarea>
+</mat-form-field>
+
+</div>
+</mat-card>
+
+
+<p class="font">Contacts</p>
+
+    <mat-card class="card">
+      <div class="example-container">
+
+         
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Email" [formControl]="emailFormControl"
+                       [errorStateMatcher]="matcher">
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                  Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  Email is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input type="tel"  matInput placeholder="Mobile" required >
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                  <input type="tel" matInput placeholder="Telephone">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                    <mat-label>Active</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option *ngFor="let ac of active" [value]="ac">{{ac}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                 
+                  <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-info" style="margin:20">SUBMIT</button>
+               
+                </div>
+                  </mat-card>
+                  </form>

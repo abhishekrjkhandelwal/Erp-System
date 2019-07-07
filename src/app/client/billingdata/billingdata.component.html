@@ -1,0 +1,79 @@
+<mat-card   class="card">
+  <div class="example-container">
+    <mat-form-field class="example-full-width">
+      <input matInput class="font1" placeholder="Entity"  disabled value="IMOVALUE">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Administrator">
+    </mat-form-field>
+    </div>
+    </mat-card >
+
+    <p class="font">Identificaton</p>
+
+    <mat-card class="card">
+        <div class="example-container">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Corporate Name">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Contact">
+      </mat-form-field>
+    
+    
+      <mat-form-field class="example-full-width">
+        <mat-label>country</mat-label>
+        <mat-select>
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    
+      <mat-form-field class="example-full-width">
+          <mat-label>District</mat-label>
+          <mat-select>
+            <mat-option>None</mat-option>
+            <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+    
+        <mat-form-field class="example-full-width">
+          <mat-label>city</mat-label>
+          <mat-select>
+            <mat-option>None</mat-option>
+            <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+    
+      <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Address">
+          </textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="PO BOX"></textarea>
+      </mat-form-field>
+      
+      </div>
+      </mat-card>
+      <p class="font2">Payment Shipping</p>
+
+      <mat-card class="card">
+          <div class="example-container">
+              <p class="font1">Payment Method</p>
+              <mat-radio-group class="example-radio-group">
+              <mat-radio-button class="example-radio-button" *ngFor="let pay of payment" [value]="pay">
+                {{pay}}
+              </mat-radio-button>
+            </mat-radio-group>
+            <!-- <div>Your favorite season is: {{favoriteSeason}}</div> -->
+            <p class="font1">Send Valuation</p>
+            <mat-radio-group class="example-radio-group">
+            <mat-radio-button class="example-radio-button" *ngFor="let val of valuation" [value]="val">
+              {{val}}
+            </mat-radio-button>
+          </mat-radio-group>
+            </div>
+            </mat-card>
